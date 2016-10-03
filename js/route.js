@@ -10,7 +10,7 @@
     $urlRouterProvider.otherwise('/');
     $stateProvider.state('home', {
       url: '/',
-      templateUrl: 'home.html'
+      templateUrl: '../templates/home.html'
     });
   }
 })();
