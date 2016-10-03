@@ -8,6 +8,6 @@
       bindings: {
         items: "<"
       },
-      templateUrl: 'src/templates/items.component.html',
+      templateUrl: 'src/templates/items.component.html'
     })
 })();
