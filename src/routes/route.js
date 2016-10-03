@@ -14,24 +14,27 @@
         templateUrl: 'src/templates/home.template.html'
       })
 
-    .state('categories', {
-      url: '/categories',
-      templateUrl: 'src/templates/categories.template.html',
-      controller: 'CategoriesController as CategoriesCtrl',
-      resolve: {
-        categories: ['MenuDataService', function (MenuDataService) {
-          return MenuDataService.getAllCategories();
-        }]
-      }
-    })
+      .state('categories', {
+        url: '/categories',
+        templateUrl: 'src/templates/categories.template.html',
+        controller: 'CategoriesController as CategoriesCtrl',
+        resolve: {
+          categories: ['MenuDataService', function (MenuDataService) {
+            return MenuDataService.getAllCategories();
+          }]
+        }
+      })
 
-      .state('categories.items', {
-        url: '/{categoryShortName}',
+      .state('items', {
+        url: '/items/{categoryShortName}',
         templateUrl: 'src/templates/items.template.html',
-        controller: 'ItemsController as ItemsCtrl',
+        controller: 'MenuItemsController as ItemsCtrl',
+        params: {
+          categoryShortName:null
+        },
         resolve: {
           items: ['$stateParams', 'MenuDataService', function ($stateParams, MenuDataService) {
-            return MenuDataService.getItemsForCategory($stateParams.categoryShortName);
+            return MenuDataService.getItemsForCategory($stateParams.categoryShortName)
           }]
         }
       });
