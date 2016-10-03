@@ -7,6 +7,7 @@
     .component('categories', {
       bindings: {
         categories: "<"
-      }
+      },
+      templateUrl: 'src/templates/categories.component.html'
     });
 })();

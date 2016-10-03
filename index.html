@@ -3,6 +3,7 @@
   <head>
     <meta charset="utf-8">
     <title>Module4 assignment</title>
+    <link rel="stylesheet" href="style/style.css">
   </head>
   <body>
 
@@ -13,13 +14,22 @@
     <script src="lib/angular-ui-router.min.js"></script>
 
     <!-- Modules -->
-    <script src="js/menuapp.module.js"></script>
-    <script src="js/route.js"></script>
-    <script src="js/categories.component.js"></script>
-    <script src="js/items.component.js"></script>
+    <script src="src/modules/menuapp.module.js"></script>
+    <script src="src/modules/data.module.js"></script>
 
-    <script src="js/data.module.js"></script>
-    <script src="js/menudata.service.js"></script>
+    <!-- Routes -->
+    <script src="src/routes/route.js"></script>
+
+    <!-- Controllers -->
+    <script src="src/controllers/categories.controller.js"></script>
+    <script src="src/controllers/items.controller.js"></script>
+
+    <!-- Services -->
+    <script src="src/services/menudata.service.js"></script>
+
+    <!-- Components -->
+    <script src="src/components/categories.component.js"></script>
+    <script src="src/components/items.component.js"></script>
 
   </body>
 </html>

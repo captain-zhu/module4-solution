@@ -7,6 +7,7 @@
     .component('items', {
       bindings: {
         items: "<"
-      }
+      },
+      templateUrl: 'src/templates/items.component.html',
     })
 })();
